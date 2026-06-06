@@ -1,0 +1,141 @@
+(function () {
+  const CONTENT_KEY = 'dlssr.cms.content.v1';
+  const ENQUIRY_KEY = 'dlssr.cms.enquiries.v1';
+  const SESSION_KEY = 'dlssr.cms.admin.session';
+
+  const defaultContent = {
+    hero: {
+      eyebrow: 'Complete IT Services • Strategy to Scale',
+      headline: 'Transform Your Ideas Into Powerful Digital Solutions',
+      subheadline:
+        'Web Development | Mobile Apps | Game Development | CRM & HRM Solutions | FinTech | Blockchain | Digital Marketing | SEO | Complete IT Services',
+      primaryCta: 'Get Free Consultation',
+      secondaryCta: 'Request a Quote',
+      demoCta: 'Schedule a Demo',
+    },
+    trust: ['100+ Projects Delivered', 'Global Clients', 'Dedicated Support', 'Experienced Development Team'],
+    pages: [
+      { title: 'Home', slug: '#home', showInNav: true, status: 'Published' },
+      { title: 'Services', slug: '#services', showInNav: true, status: 'Published' },
+      { title: 'Process', slug: '#process', showInNav: true, status: 'Published' },
+      { title: 'Portfolio', slug: '#portfolio', showInNav: true, status: 'Published' },
+      { title: 'Blog', slug: '#blog', showInNav: true, status: 'Published' },
+      { title: 'FAQ', slug: '#faq', showInNav: true, status: 'Published' },
+      { title: 'Contact', slug: '#quote', showInNav: true, status: 'Published' },
+    ],
+    services: [
+      { icon: '🌐', title: 'Website Development', summary: 'Custom websites, eCommerce, CMS, and portals.' },
+      { icon: '📱', title: 'Mobile App Development', summary: 'Android, iOS, and hybrid applications.' },
+      { icon: '🎮', title: 'Game Development', summary: '2D games, 3D games, and multiplayer solutions.' },
+      { icon: '🤝', title: 'CRM Development', summary: 'Sales automation and customer management.' },
+      { icon: '👥', title: 'HRM Solutions', summary: 'Employee management and payroll systems.' },
+      { icon: '💳', title: 'FinTech Development', summary: 'Payment solutions and banking applications.' },
+      { icon: '⛓️', title: 'Blockchain Development', summary: 'Smart contracts, crypto platforms, and Web3.' },
+      { icon: '📣', title: 'Digital Marketing', summary: 'Lead generation, PPC, and social media marketing.' },
+      { icon: '🔎', title: 'SEO Services', summary: 'Technical SEO, local SEO, and enterprise SEO.' },
+      { icon: '☁️', title: 'IT Consulting', summary: 'Cloud solutions, DevOps, and software architecture.' },
+    ],
+    blogPosts: [
+      {
+        id: 'seo-audit-roadmap',
+        title: 'How an SEO Audit Creates a Faster Digital Growth Roadmap',
+        category: 'SEO',
+        excerpt: 'A practical checklist for finding technical, content, and conversion opportunities before scaling campaigns.',
+        content:
+          'Start with crawlability, Core Web Vitals, keyword gaps, local search signals, and conversion tracking. Then prioritize fixes by revenue impact.',
+        status: 'Published',
+        date: '2026-06-06',
+      },
+      {
+        id: 'crm-for-sales-teams',
+        title: 'What to Include in a Custom CRM for High-Performing Sales Teams',
+        category: 'CRM',
+        excerpt: 'Lead capture, automation, pipeline visibility, and reporting features that help teams convert more prospects.',
+        content:
+          'A CRM should centralize leads, automate follow-ups, track deal stages, and show managers the actions that produce revenue.',
+        status: 'Published',
+        date: '2026-06-06',
+      },
+      {
+        id: 'mvp-to-enterprise',
+        title: 'From MVP to Enterprise Product: A Safer Development Path',
+        category: 'Product Strategy',
+        excerpt: 'Use phased releases, user feedback, and scalable architecture to reduce risk while growing a digital product.',
+        content:
+          'Launch with the smallest valuable scope, validate the workflow, improve UX, and scale infrastructure as adoption grows.',
+        status: 'Draft',
+        date: '2026-06-06',
+      },
+    ],
+    contact: {
+      phone: '+1 000 000 0000',
+      email: 'hello@dlssrinfotech.com',
+      address: 'Your business address',
+      whatsapp: '10000000000',
+    },
+  };
+
+  function clone(value) {
+    return JSON.parse(JSON.stringify(value));
+  }
+
+  function loadJson(key, fallback) {
+    try {
+      const value = localStorage.getItem(key);
+      return value ? JSON.parse(value) : clone(fallback);
+    } catch (error) {
+      console.warn(`Unable to load ${key}`, error);
+      return clone(fallback);
+    }
+  }
+
+  function saveJson(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  function getContent() {
+    const stored = loadJson(CONTENT_KEY, defaultContent);
+    return { ...clone(defaultContent), ...stored };
+  }
+
+  function saveContent(content) {
+    saveJson(CONTENT_KEY, { ...getContent(), ...content });
+  }
+
+  function getEnquiries() {
+    return loadJson(ENQUIRY_KEY, []);
+  }
+
+  function saveEnquiries(enquiries) {
+    saveJson(ENQUIRY_KEY, enquiries);
+  }
+
+  function saveEnquiry(enquiry) {
+    const enquiries = getEnquiries();
+    const nextEnquiry = {
+      id: `ENQ-${Date.now()}`,
+      status: 'New',
+      createdAt: new Date().toISOString(),
+      ...enquiry,
+    };
+    enquiries.unshift(nextEnquiry);
+    saveEnquiries(enquiries);
+    return nextEnquiry;
+  }
+
+  function resetContent() {
+    saveJson(CONTENT_KEY, clone(defaultContent));
+    return getContent();
+  }
+
+  window.DLSSR_CMS = {
+    SESSION_KEY,
+    defaultContent,
+    getContent,
+    saveContent,
+    resetContent,
+    getEnquiries,
+    saveEnquiries,
+    saveEnquiry,
+  };
+})();

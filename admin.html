@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Admin | DL SSR INFOTECH CMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section class="login-screen" data-login-screen>
+        <form class="login-card" data-login-form>
+          <p class="eyebrow">DL SSR INFOTECH Admin</p>
+          <h1>Manage Website Content, Blog & Enquiries</h1>
+          <p>Use the demo passcode <strong>admin123</strong>. Replace this static-only guard with server authentication before production deployment.</p>
+          <label>Admin Passcode<input type="password" name="passcode" placeholder="admin123" required /></label>
+          <button type="submit">Open Admin</button>
+          <a href="index.html">← Back to website</a>
+        </form>
+      </section>
+
+      <section class="dashboard is-hidden" data-dashboard>
+        <aside class="sidebar">
+          <a class="brand" href="index.html"><span class="brand-mark">DL</span><span>DL SSR Admin</span></a>
+          <nav aria-label="Admin sections">
+            <button class="active" data-tab-button="overview">Overview</button>
+            <button data-tab-button="content">Website Content</button>
+            <button data-tab-button="pages">Pages</button>
+            <button data-tab-button="services">Services</button>
+            <button data-tab-button="blog">Blog</button>
+            <button data-tab-button="enquiries">Enquiries</button>
+          </nav>
+          <button class="logout" data-logout>Logout</button>
+        </aside>
+
+        <div class="admin-main">
+          <header class="admin-header">
+            <div>
+              <p class="eyebrow">Static CMS Dashboard</p>
+              <h1>Website Manager</h1>
+            </div>
+            <div class="header-actions">
+              <a class="secondary" href="index.html" target="_blank" rel="noreferrer">Preview Site</a>
+              <button class="danger" data-reset-content>Reset Content</button>
+            </div>
+          </header>
+
+          <section class="tab-panel" data-tab-panel="overview">
+            <div class="stats-cards">
+              <article><strong data-stat="enquiries">0</strong><span>Total Enquiries</span></article>
+              <article><strong data-stat="newEnquiries">0</strong><span>New Enquiries</span></article>
+              <article><strong data-stat="pages">0</strong><span>Managed Pages</span></article>
+              <article><strong data-stat="posts">0</strong><span>Blog Posts</span></article>
+            </div>
+            <div class="notice">
+              <h2>Production note</h2>
+              <p>This admin is a static, browser-based CMS using localStorage so it works without a backend. To share content across devices and safely store enquiries, connect these same forms to a secure database/API before launch.</p>
+            </div>
+          </section>
+
+          <section class="tab-panel is-hidden" data-tab-panel="content">
+            <form class="admin-card grid-form" data-content-form>
+              <h2>Hero & Contact Content</h2>
+              <label>Hero Eyebrow<input name="eyebrow" required /></label>
+              <label>Hero Headline<textarea name="headline" rows="2" required></textarea></label>
+              <label>Hero Subheadline<textarea name="subheadline" rows="3" required></textarea></label>
+              <label>Primary CTA<input name="primaryCta" required /></label>
+              <label>Secondary CTA<input name="secondaryCta" required /></label>
+              <label>Demo CTA<input name="demoCta" required /></label>
+              <label>Phone<input name="phone" required /></label>
+              <label>Email<input type="email" name="email" required /></label>
+              <label>Office Address<input name="address" required /></label>
+              <label>WhatsApp Number<input name="whatsapp" required /></label>
+              <label class="full">Trust Items<textarea name="trust" rows="4" aria-describedby="trust-help"></textarea><small id="trust-help">One trust item per line.</small></label>
+              <button type="submit">Save Website Content</button>
+            </form>
+          </section>
+
+          <section class="tab-panel is-hidden" data-tab-panel="pages">
+            <div class="admin-card">
+              <div class="section-title"><h2>Manage Pages</h2><button data-add-page type="button">Add Page</button></div>
+              <div class="table-wrap"><table><thead><tr><th>Title</th><th>Slug</th><th>Nav</th><th>Status</th><th></th></tr></thead><tbody data-pages-table></tbody></table></div>
+              <button data-save-pages type="button">Save Pages</button>
+            </div>
+          </section>
+
+          <section class="tab-panel is-hidden" data-tab-panel="services">
+            <div class="admin-card">
+              <div class="section-title"><h2>Manage Services</h2><button data-add-service type="button">Add Service</button></div>
+              <div class="table-wrap"><table><thead><tr><th>Icon</th><th>Title</th><th>Summary</th><th></th></tr></thead><tbody data-services-table></tbody></table></div>
+              <button data-save-services type="button">Save Services</button>
+            </div>
+          </section>
+
+          <section class="tab-panel is-hidden" data-tab-panel="blog">
+            <div class="admin-card">
+              <div class="section-title"><h2>Manage Blog Posts</h2><button data-add-post type="button">Add Blog Post</button></div>
+              <div class="post-editor" data-post-editor></div>
+              <button data-save-posts type="button">Save Blog</button>
+            </div>
+          </section>
+
+          <section class="tab-panel is-hidden" data-tab-panel="enquiries">
+            <div class="admin-card">
+              <div class="section-title">
+                <h2>Stored Enquiries</h2>
+                <div><button data-export-enquiries type="button">Export CSV</button><button class="danger" data-clear-enquiries type="button">Clear All</button></div>
+              </div>
+              <div class="table-wrap"><table><thead><tr><th>Date</th><th>Source</th><th>Contact Details</th><th>Status</th><th></th></tr></thead><tbody data-enquiries-table></tbody></table></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="cms.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
