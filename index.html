@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DL SSR INFOTECH builds high-converting websites, mobile apps, games, CRM, HRM, FinTech, blockchain, SEO, digital marketing, and complete IT services."
+    />
+    <title>DL SSR INFOTECH | Digital Solutions & Lead Generation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="DL SSR INFOTECH home">
+          <span class="brand-mark">DL</span>
+          <span>DL SSR INFOTECH</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links" data-render="nav-pages">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#blog">Blog</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="#quote">Get Quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" aria-labelledby="hero-title">
+        <div class="hero-bg"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-cms="hero.eyebrow">Complete IT Services • Strategy to Scale</p>
+            <h1 id="hero-title" data-cms="hero.headline">Transform Your Ideas Into Powerful Digital Solutions</h1>
+            <p class="hero-subtitle" data-cms="hero.subheadline">
+              Web Development | Mobile Apps | Game Development | CRM &amp; HRM Solutions | FinTech |
+              Blockchain | Digital Marketing | SEO | Complete IT Services
+            </p>
+            <div class="hero-actions" aria-label="Primary calls to action">
+              <a class="btn btn-primary" href="#quote" data-cms="hero.primaryCta">Get Free Consultation</a>
+              <a class="btn btn-secondary" href="#quote" data-cms="hero.secondaryCta">Request a Quote</a>
+              <a class="btn btn-ghost" href="#process" data-cms="hero.demoCta">Schedule a Demo</a>
+            </div>
+            <div class="trust-strip" aria-label="Trust elements" data-render="trust">
+              <span>100+ Projects Delivered</span>
+              <span>Global Clients</span>
+              <span>Dedicated Support</span>
+              <span>Experienced Development Team</span>
+            </div>
+          </div>
+          <aside class="lead-card" id="quote" aria-labelledby="lead-form-title">
+            <p class="card-kicker">Free proposal</p>
+            <h2 id="lead-form-title">Start Your Project</h2>
+            <form class="lead-form" data-form-name="Hero proposal">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your full name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Phone Number
+                <input type="tel" name="phone" placeholder="+1 555 000 0000" required />
+              </label>
+              <label>
+                Service Required
+                <select name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Website Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Game Development</option>
+                  <option>CRM / HRM Solution</option>
+                  <option>FinTech Development</option>
+                  <option>Blockchain Development</option>
+                  <option>SEO / Digital Marketing</option>
+                </select>
+              </label>
+              <button class="btn btn-primary form-submit" type="submit">Get Free Proposal</button>
+              <p class="form-note">No spam. A solution consultant will contact you shortly.</p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Services overview</p>
+            <h2 id="services-title">Everything You Need to Launch, Automate, and Grow</h2>
+            <p>Build revenue-ready digital products with one accountable technology partner.</p>
+          </div>
+          <div class="card-grid services-grid" data-render="services">
+            <article><span class="icon">🌐</span><h3>Website Development</h3><p>Custom websites, eCommerce, CMS, and portals.</p></article>
+            <article><span class="icon">📱</span><h3>Mobile App Development</h3><p>Android, iOS, and hybrid applications.</p></article>
+            <article><span class="icon">🎮</span><h3>Game Development</h3><p>2D games, 3D games, and multiplayer solutions.</p></article>
+            <article><span class="icon">🤝</span><h3>CRM Development</h3><p>Sales automation and customer management.</p></article>
+            <article><span class="icon">👥</span><h3>HRM Solutions</h3><p>Employee management and payroll systems.</p></article>
+            <article><span class="icon">💳</span><h3>FinTech Development</h3><p>Payment solutions and banking applications.</p></article>
+            <article><span class="icon">⛓️</span><h3>Blockchain Development</h3><p>Smart contracts, crypto platforms, and Web3.</p></article>
+            <article><span class="icon">📣</span><h3>Digital Marketing</h3><p>Lead generation, PPC, and social media marketing.</p></article>
+            <article><span class="icon">🔎</span><h3>SEO Services</h3><p>Technical SEO, local SEO, and enterprise SEO.</p></article>
+            <article><span class="icon">☁️</span><h3>IT Consulting</h3><p>Cloud solutions, DevOps, and software architecture.</p></article>
+          </div>
+          <div class="center-cta"><a class="btn btn-primary" href="#quote">Discuss Your Project</a></div>
+        </div>
+      </section>
+
+      <section class="section why" aria-labelledby="why-title">
+        <div class="container split-layout">
+          <div>
+            <p class="eyebrow">Why choose DL SSR INFOTECH</p>
+            <h2 id="why-title">Strategic Execution for Every Stage of Growth</h2>
+            <p>
+              From first discovery call to post-launch optimization, our team aligns technology,
+              design, and marketing around measurable business outcomes.
+            </p>
+            <a class="btn btn-secondary" href="#offer">Claim Free Consultation</a>
+          </div>
+          <div class="feature-list">
+            <div><strong>Expertise Across Industries</strong><span>Healthcare, Finance, Education, Retail, Real Estate</span></div>
+            <div><strong>End-to-End Solutions</strong><span>From Idea → Design → Development → Marketing</span></div>
+            <div><strong>Agile Development Process</strong><span>Fast delivery with continuous improvements</span></div>
+            <div><strong>Affordable Pricing</strong><span>Enterprise quality at competitive cost</span></div>
+            <div><strong>Dedicated Project Manager</strong><span>A single point of contact for complete clarity</span></div>
+            <div><strong>24/7 Support</strong><span>Reliable technical assistance when you need it</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Our development process</p>
+            <h2 id="process-title">A Proven Timeline from Requirement to Growth</h2>
+          </div>
+          <ol class="timeline">
+            <li><span>01</span><strong>Requirement Analysis</strong></li>
+            <li><span>02</span><strong>UI/UX Design</strong></li>
+            <li><span>03</span><strong>Development</strong></li>
+            <li><span>04</span><strong>Testing &amp; Quality Assurance</strong></li>
+            <li><span>05</span><strong>Deployment</strong></li>
+            <li><span>06</span><strong>Support &amp; Growth</strong></li>
+          </ol>
+          <div class="center-cta"><a class="btn btn-primary" href="#quote">Schedule a Demo</a></div>
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured portfolio</p>
+            <h2 id="portfolio-title">Digital Products and Campaigns Built for Results</h2>
+          </div>
+          <div class="portfolio-grid">
+            <article><div class="mockup web"></div><h3>Corporate Websites</h3></article>
+            <article><div class="mockup app"></div><h3>Mobile Applications</h3></article>
+            <article><div class="mockup crm"></div><h3>CRM Systems</h3></article>
+            <article><div class="mockup hrm"></div><h3>HRM Platforms</h3></article>
+            <article><div class="mockup fintech"></div><h3>FinTech Products</h3></article>
+            <article><div class="mockup blockchain"></div><h3>Blockchain Solutions</h3></article>
+            <article><div class="mockup game"></div><h3>Gaming Projects</h3></article>
+            <article><div class="mockup marketing"></div><h3>Marketing Campaign Results</h3></article>
+          </div>
+          <div class="center-cta"><a class="btn btn-secondary" href="#quote">View Full Portfolio</a></div>
+        </div>
+      </section>
+
+      <section class="section industries" aria-labelledby="industries-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Industries we serve</p>
+            <h2 id="industries-title">Domain Experience Across High-Growth Markets</h2>
+          </div>
+          <div class="pill-list">
+            <span>Healthcare</span><span>Education</span><span>Finance</span><span>E-commerce</span><span>Manufacturing</span><span>Logistics</span><span>Real Estate</span><span>Startups</span><span>Government Projects</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Client testimonials</p>
+            <h2 id="testimonials-title">Trusted by Teams Ready to Grow</h2>
+          </div>
+          <div class="testimonial-grid">
+            <blockquote><span>★★★★★</span><p>“DL SSR INFOTECH transformed our business with an amazing CRM solution.”</p></blockquote>
+            <blockquote><span>★★★★★</span><p>“Professional team, timely delivery, and excellent support.”</p></blockquote>
+            <blockquote><span>★★★★★</span><p>“Our SEO traffic increased significantly within months.”</p></blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats" aria-label="Results and achievements">
+        <div class="container stats-grid">
+          <div><strong>100+</strong><span>Projects Completed</span></div>
+          <div><strong>50+</strong><span>Happy Clients</span></div>
+          <div><strong>15+</strong><span>Industries Served</span></div>
+          <div><strong>98%</strong><span>Client Satisfaction</span></div>
+        </div>
+      </section>
+
+      <section class="section blog" id="blog" aria-labelledby="blog-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Blog & insights</p>
+            <h2 id="blog-title">Latest Digital Growth Resources</h2>
+            <p>Publish SEO-friendly articles from the admin panel to educate prospects and generate organic leads.</p>
+          </div>
+          <div class="blog-grid" data-render="blog-posts"></div>
+          <div class="center-cta"><a class="btn btn-primary" href="#quote">Plan My Growth Strategy</a></div>
+        </div>
+      </section>
+
+      <section class="section offer" id="offer" aria-labelledby="offer-title">
+        <div class="container offer-card">
+          <div>
+            <p class="eyebrow">Special offer</p>
+            <h2 id="offer-title">Free Business Consultation</h2>
+            <p>Get a practical growth roadmap tailored to your product, website, or marketing goals.</p>
+            <ul class="check-list">
+              <li>Website Audit</li>
+              <li>SEO Audit</li>
+              <li>App Strategy Session</li>
+              <li>Digital Growth Roadmap</li>
+            </ul>
+          </div>
+          <form class="lead-form compact" data-form-name="Consultation offer">
+            <label>Name<input type="text" name="name" required /></label>
+            <label>Email<input type="email" name="email" required /></label>
+            <label>Phone<input type="tel" name="phone" required /></label>
+            <label>Business Name<input type="text" name="business" /></label>
+            <button class="btn btn-primary form-submit" type="submit">Claim Free Consultation</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Answers Before We Start</h2>
+          </div>
+          <div class="faq-list">
+            <details open><summary>How long does development take?</summary><p>Project timelines vary based on complexity.</p></details>
+            <details><summary>Do you provide support after launch?</summary><p>Yes, ongoing maintenance and support are available.</p></details>
+            <details><summary>Can you handle complete digital transformation?</summary><p>Absolutely. We offer end-to-end IT services.</p></details>
+            <details><summary>Do you work with startups?</summary><p>Yes, from MVP development to enterprise solutions.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="final-cta-title">
+        <div class="container">
+          <h2 id="final-cta-title">Ready to Build Your Next Digital Success Story?</h2>
+          <p>Let's discuss your project and create something exceptional.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Get Free Quote</a>
+            <a class="btn btn-secondary" href="#quote">Schedule Meeting</a>
+            <a class="btn btn-ghost" href="tel:+10000000000">Call Now</a>
+            <a class="btn btn-ghost" href="https://wa.me/10000000000">WhatsApp Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="#home"><span class="brand-mark">DL</span><span>DL SSR INFOTECH</span></a>
+          <p>Convert visitors into leads, meetings, and long-term clients with digital solutions that scale.</p>
+          <form class="newsletter" data-form-name="Newsletter subscription">
+            <input type="email" name="email" aria-label="Email for newsletter" placeholder="Newsletter email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#home">About Us</a><a href="#blog">Blog</a><a href="#quote">Contact</a><a href="admin.html">Admin</a></div>
+        <div><h3>Services</h3><a href="#services">Web Development</a><a href="#services">App Development</a><a href="#services">CRM</a><a href="#services">HRM</a><a href="#services">FinTech</a><a href="#services">Blockchain</a><a href="#services">SEO</a><a href="#services">Digital Marketing</a></div>
+        <div><h3>Contact Information</h3><p>Phone: <span data-cms="contact.phone">+1 000 000 0000</span></p><p>Email: <span data-cms="contact.email">hello@dlssrinfotech.com</span></p><p>Office Address: <span data-cms="contact.address">Your business address</span></p><div class="socials"><a href="#">LinkedIn</a><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">YouTube</a></div></div>
+      </div>
+    </footer>
+
+    <button class="sticky-callback" type="button" data-open-quote>Instant Callback Request</button>
+    <a class="whatsapp" href="https://wa.me/10000000000" aria-label="Chat on WhatsApp">☘</a>
+    <button class="chatbot" type="button" aria-label="Open chatbot">💬</button>
+
+    <div class="quote-drawer" aria-hidden="true">
+      <div class="quote-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+        <button class="close-drawer" type="button" aria-label="Close quote form">×</button>
+        <p class="eyebrow">Multi-step quote form</p>
+        <h2 id="drawer-title">Tell Us About Your Project</h2>
+        <form class="lead-form" data-form-name="Multi-step quote">
+          <label>What do you need?<select name="service" required><option>Website or eCommerce</option><option>Mobile App</option><option>CRM / HRM</option><option>Marketing / SEO</option></select></label>
+          <label>Budget Range<select name="budget" required><option>Need guidance</option><option>Under $5k</option><option>$5k - $20k</option><option>$20k+</option></select></label>
+          <label>Your Email<input type="email" name="email" required /></label>
+          <button class="btn btn-primary form-submit" type="submit">Request Callback</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="exit-popup" aria-hidden="true">
+      <div class="exit-card" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+        <button class="close-exit" type="button" aria-label="Close popup">×</button>
+        <h2 id="exit-title">Before You Leave – Get a Free Project Consultation</h2>
+        <p>Share your email and we will send a practical roadmap for your next digital solution.</p>
+        <form class="newsletter" data-form-name="Exit intent consultation">
+          <input type="email" name="email" aria-label="Email for exit consultation" placeholder="you@example.com" required />
+          <button type="submit">Send My Roadmap</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="cms.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
