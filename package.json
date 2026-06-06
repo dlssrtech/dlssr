@@ -1,0 +1,20 @@
+{
+  "name": "dlssr-infotech-lead-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "backend": "node server/index.js",
+    "dev:all": "npm run backend & npm run dev",
+    "check": "node --check server/index.js && node --check lib/api.js"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}
